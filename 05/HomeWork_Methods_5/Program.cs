@@ -5,17 +5,21 @@ namespace HomeWork_Methods_5
 {
     class Program
     {
+        /// <summary>
+        /// Метод возвращающий введеное число
+        /// </summary>
+        /// <returns> Колличество строк первой матрицы </returns> 
         public static int DataEntryRowsFirst()
         {
             while (true)
             {
                 try
                 {
-                    int MatrixRowsFirst = 0;
+                    int matrixRowsFirst = 0;
                     Console.Write($" Введите колличество строк первой матрицы : ");
-                    MatrixRowsFirst = int.Parse(Console.ReadLine());
+                    matrixRowsFirst = int.Parse(Console.ReadLine());
 
-                    return MatrixRowsFirst;
+                    return matrixRowsFirst;
                 }
                 catch (FormatException)
                 {
@@ -26,18 +30,23 @@ namespace HomeWork_Methods_5
                 }
             }
         }
+
+        /// <summary>
+        /// Метод возвращающий введеное число
+        /// </summary>
+        /// <returns> Колличество столбцов первой матрицы </returns>
         public static int DataEntryColumnsFirst()
         {
             while (true)
             {
                 try
                 {
-                    int MatrixColumnsFirst = 0;
+                    int matrixColumnsFirst = 0;
 
                     Console.Write($" Введите колличество столбцов первой матрицы : ");
-                    MatrixColumnsFirst = int.Parse(Console.ReadLine());
+                    matrixColumnsFirst = int.Parse(Console.ReadLine());
 
-                    return MatrixColumnsFirst;
+                    return matrixColumnsFirst;
                 }
                 catch (FormatException)
                 {
@@ -49,17 +58,22 @@ namespace HomeWork_Methods_5
             }
 
         }
+
+        /// <summary>
+        /// Метод возвращающий введеное число
+        /// </summary>
+        /// <returns> Колличество строк второй матрицы </returns>
         public static int DataEntryRowsSecond()
         {
             while (true)
             {
                 try
                 {
-                    int MatrixRowsSecond = 0;
+                    int matrixRowsSecond = 0;
                     Console.Write($" Введите колличество строк второй матрицы : ");
-                    MatrixRowsSecond = int.Parse(Console.ReadLine());
+                    matrixRowsSecond = int.Parse(Console.ReadLine());
 
-                    return MatrixRowsSecond;
+                    return matrixRowsSecond;
                 }
                 catch (FormatException)
                 {
@@ -69,19 +83,24 @@ namespace HomeWork_Methods_5
                     continue;
                 }
             }
-        }       
+        }
+
+        /// <summary>
+        /// Метод возвращающий введеное число
+        /// </summary>
+        /// <returns> Колличество столбцов второй матрицы </returns>
         public static int DataEntryColumnsSecond()
         {
             while (true)
             {
                 try
                 {
-                    int MatrixColumnsSecond = 0;
+                    int matrixColumnsSecond = 0;
 
                     Console.Write($" Введите колличество столбцов второй матрицы : ");
-                    MatrixColumnsSecond = int.Parse(Console.ReadLine());
+                    matrixColumnsSecond = int.Parse(Console.ReadLine());
 
-                    return MatrixColumnsSecond;
+                    return matrixColumnsSecond;
                 }
                 catch (FormatException)
                 {
@@ -94,18 +113,22 @@ namespace HomeWork_Methods_5
 
         }
 
-        public static int DataEntryMultiplier()
+        /// <summary>
+        /// Метод возвращающий введеное число
+        /// </summary>
+        /// <returns> Множетель матрицы </returns>
+        public static int EntryMultiplier()
         {
             while (true)
             {
                 try
                 {
-                    int Multiplier = 0;
+                    int multiplier = 0;
 
                     Console.Write($" Введите множетель матрицы ");
-                    Multiplier = int.Parse(Console.ReadLine());
+                    multiplier = int.Parse(Console.ReadLine());
 
-                    return Multiplier;
+                    return multiplier;
                 }
                 catch (FormatException)
                 {
@@ -118,7 +141,12 @@ namespace HomeWork_Methods_5
 
         }
 
-        public static void ArrayOnNumber(int[,] Args ,int Args4)
+        /// <summary>
+        /// Метод умножения матрицы на число
+        /// </summary>
+        /// <param name="Args"> Параметры массива </param>
+        /// <param name="Args1"> Множетель матрици </param>
+        public static void ArrayOnNumber(int[,] Args ,int Args1)
         {
             Random r = new Random();
 
@@ -135,19 +163,25 @@ namespace HomeWork_Methods_5
                 Console.WriteLine();
             }
             Console.WriteLine();
-            Console.WriteLine($"  * {Args4}  ");
+            Console.WriteLine($"  * {Args1}  ");
             Console.WriteLine();
 
             for (int i = 0; i < Args.GetLength(0); i++)
             {
                 for (int a = 0; a < Args.GetLength(1); a++)
                 {
-                    result[i, a] = massiv[i, a] * Args4;
+                    result[i, a] = massiv[i, a] * Args1;
                     Console.Write($" {result[i, a],4} ");
                 }
                 Console.WriteLine();
             }
         }
+
+        /// <summary>
+        /// Метод сложения двух матриц
+        /// </summary>
+        /// <param name="ArgsFirst"> Параметры первого массива </param>
+        /// <param name="ArgsSecond"> Параметры второго массива </param>
         public static void ArrayPlusArray(int[,] ArgsFirst, int[,] ArgsSecond)
         {
             int[,] result = new int[ArgsFirst.Length, ArgsSecond.Length];
@@ -199,6 +233,12 @@ namespace HomeWork_Methods_5
 
 
         }
+
+        /// <summary>
+        /// Метод вычитания двух матриц
+        /// </summary>
+        /// <param name="ArgsFirst"> Параметры первого массива </param>
+        /// <param name="ArgsSecond"> Параметры второго массива </param>
         public static void ArrayMinusArray(int[,] ArgsFirst, int[,] ArgsSecond)
         {
             int[,] result = new int[ArgsFirst.Length, ArgsSecond.Length];
@@ -250,6 +290,12 @@ namespace HomeWork_Methods_5
 
 
         }
+
+        /// <summary>
+        /// Метод умножения двух матриц
+        /// </summary>
+        /// <param name="ArgsFirst"> Параметры первого массива </param>
+        /// <param name="ArgsSecond"> Параметры второго массива </param>
         public static void ArrayMultiplyArray(int[,] ArgsFirst, int[,] ArgsSecond)
         {
             int[,] result = new int[ArgsFirst.GetLength(0), ArgsSecond.GetLength(1)];
