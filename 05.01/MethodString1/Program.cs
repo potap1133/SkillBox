@@ -4,6 +4,10 @@ namespace MethodString1
 {
     class Program
     {
+        /// <summary>
+        /// Метод для ввода текста
+        /// </summary>
+        /// <returns> Возвращает введёный текст </returns>
         public static string Text()
         {
             Console.Write($" Введите текст ");
@@ -12,6 +16,11 @@ namespace MethodString1
             return text;
         }
 
+        /// <summary>
+        /// Метод для удаления из текста знаков припенания, скобок и т.д.
+        /// </summary>
+        /// <param name="Args"> Введёный текст </param>
+        /// <returns> Текст без пробелов </returns>
         public static string[] CleaningText(string Args)
         {
             Args = Args.Replace(',', ' ');
@@ -24,6 +33,10 @@ namespace MethodString1
             return minString;
         }
 
+        /// <summary>
+        /// Метод выводит массив слов в столбец
+        /// </summary>
+        /// <param name="Args"> Массив слов </param>
         public static void PrintWordsOn(string[] Args)
         {
             for (int i = 0; i < Args.GetLength(0); i++)

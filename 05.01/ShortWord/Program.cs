@@ -5,9 +5,9 @@ namespace ShortWord
     class Program
     {
         /// <summary>
-        /// 
+        /// Метод для ввода текста
         /// </summary>
-        /// <returns></returns>
+        /// <returns> Возвращает введёный текст </returns>
         public static string Text()
         {
             Console.Write($" Введите текст ");
@@ -15,7 +15,12 @@ namespace ShortWord
 
             return text;
         }
-        
+
+        /// <summary>
+        /// Метод для удаления из текста знаков припенания, скобок и т.д.
+        /// </summary>
+        /// <param name="Args"> Введёный текст </param>
+        /// <returns> Текст без пробелов </returns>
         public static string[] CleaningText(string Args)
         {
             Args = Args.Replace(',', ' ');
@@ -27,7 +32,12 @@ namespace ShortWord
             string[] minString = Args.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             return minString;
         }
-         
+
+        /// <summary>
+        /// Метод переводит массив из слов в массив чисел (колличечства букв в словах)
+        /// </summary>
+        /// <param name="Args"> Массив из слов </param>
+        /// <returns> Массив чисел (колличечства букв всловах) </returns>
         public static int[] СonversionNumbers(string[] Args)
         {
             int[] numbersWords = new int[Args.Length];
@@ -40,7 +50,13 @@ namespace ShortWord
 
             return numbersWords;
         }
-        
+
+        /// <summary>
+        /// Метод получает массив слов соответствующих определенному параметру
+        /// </summary>
+        /// <param name="Args"> Массив чисел (колличечства букв в словах) </param>
+        /// <param name="Args1">Массив из слов</param>
+        /// <returns> Массив слов соответствующих определенному параметру </returns>
         public static string[] SortWord(int[] Args, string[] Args1)
         {
             string[] resalt = new string[Args.Length];
@@ -55,7 +71,11 @@ namespace ShortWord
             }
             return resalt;
         }
-              
+
+        /// <summary>
+        /// Метод выводит массив слов соответствующих определенному параметру
+        /// </summary>
+        /// <param name="Args"> Массив слов соответствующих определенному параметру </param>
         public static void PrintWords(string[] Args)
         {
             for (int i = 0; i < Args.Length; i++)
@@ -74,7 +94,7 @@ namespace ShortWord
             string[] words = CleaningText(initialText);
             int[] numberWords = СonversionNumbers(words);
             Array.Sort(numberWords);
-            Array.Reverse(numberWords);
+            //Array.Reverse(numberWords);
             string[] checkingWords = SortWord(numberWords, words);
             
             Console.WriteLine();
