@@ -60,13 +60,18 @@ namespace MatrixOnMatrix
         /// <returns></returns>
         public static int[,] МatrixМultiplicationМatrix(int[,] Args, int[,] Args1)
         {
-            int[,] result = new int[Args.GetLength(0), Args1.GetLength(1)];
+            int args00 = Args.GetLength(0);
+            int args01 = Args.GetLength(1);
+            int args10 = Args1.GetLength(0);
+            int args11 = Args1.GetLength(1);
 
-            for (int i = 0; i < Args.GetLength(0); i++)
+            int[,] result = new int[args00, args11];
+
+            for (int i = 0; i < args00; i++)
             {
-                for (int j = 0; j < Args1.GetLength(1); j++)
+                for (int j = 0; j < args11; j++)
                 {
-                    for (int k = 0; k < Args.GetLength(1); k++)
+                    for (int k = 0; k < args01; k++)
                     {
                         result[i, j] += Args[i, k] * Args1[k, j];
                     }
@@ -109,8 +114,6 @@ namespace MatrixOnMatrix
         /// <param name="Args"></param>
         public static void PrintMatrics(int[,] Args)
         {
-            //int[,] mass = new int[Args.GetLength(0), Args.GetLength(1)];
-
             for (int i = 0; i < Args.GetLength(0); i++)
             {
                 for (int j = 0; j < Args.GetLength(1); j++)
