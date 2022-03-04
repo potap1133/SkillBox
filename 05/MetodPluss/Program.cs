@@ -61,11 +61,16 @@ namespace MetodPluss
         /// <returns>Возвращает результат сложения матриц</returns>
         public static int[,] SumМatrix(int[,] Args, int[,] Args1)
         {
-            int[,] result = new int[Args.GetLength(0), Args1.GetLength(1)];
+            int argsOne = Args.GetLength(0);
+            int argsTwo = Args.GetLength(1);
+            int argsThree = Args1.GetLength(0);
+            int argsFour = Args1.GetLength(1);
 
-            for (int i = 0; i < Args.GetLength(0); i++)
+            int[,] result = new int[argsOne, argsFour];
+
+            for (int i = 0; i < argsOne; i++)
             {
-                for (int j = 0; j < Args1.GetLength(1); j++)
+                for (int j = 0; j < argsFour; j++)
                 {
                     result[i, j] = Args[i, j] + Args1[i, j];
                 }
@@ -88,11 +93,12 @@ namespace MetodPluss
         /// <param name="Args"></param>
         public static void PrintMatrics(int[,] Args)
         {
-            //int[,] mass = new int[Args.GetLength(0), Args.GetLength(1)];
-
-            for (int i = 0; i < Args.GetLength(0); i++)
+            int argsOne = Args.GetLength(0);
+            int argsTwo = Args.GetLength(1);
+            
+            for (int i = 0; i < argsOne; i++)
             {
-                for (int j = 0; j < Args.GetLength(1); j++)
+                for (int j = 0; j < argsTwo; j++)
                 {
                     Console.Write($"{Args[i, j],4}");
                 }

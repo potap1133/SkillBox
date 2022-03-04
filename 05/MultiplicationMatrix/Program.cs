@@ -62,11 +62,14 @@ namespace MultiplicationMatrix
         /// <returns>Возвращает результат умножения матрицы на число</returns>
         public static int[,] МultiplicationМatrix(int[,] Args, int Args1)
         {
-            int[,] result = new int[Args.GetLength(0), Args.GetLength(1)];
+            int argsOne = Args.GetLength(0);
+            int argsTwo = Args.GetLength(1);
 
-            for (int i = 0; i < Args.GetLength(0); i++)
+            int[,] result = new int[argsOne, argsTwo];
+
+            for (int i = 0; i < argsOne; i++)
             {
-                for (int j = 0; j < Args.GetLength(1); j++)
+                for (int j = 0; j < argsTwo; j++)
                 {
                     result[i, j] = Args[i, j] * Args1;
                 }
@@ -89,11 +92,12 @@ namespace MultiplicationMatrix
         /// <param name="Args"></param>
         public static void PrintMatrics(int[,] Args)
         {
-            //int[,] mass = new int[Args.GetLength(0), Args.GetLength(1)];
+            int argsOne = Args.GetLength(0);
+            int argsTwo = Args.GetLength(1);
 
-            for (int i = 0; i < Args.GetLength(0); i++)
+            for (int i = 0; i < argsOne; i++)
             {
-                for (int j = 0; j < Args.GetLength(1); j++)
+                for (int j = 0; j < argsTwo; j++)
                 {
                     Console.Write($"{Args[i, j],4}");
                 }

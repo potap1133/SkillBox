@@ -1,19 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31129.286
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork_Methods_5_01", "HomeWork_Methods_5_01.csproj", "{21FDC019-26EA-4A89-88A9-B3A14CBBC48F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork_Methods_5_02", "..\HomeWork_Methods_5_02\HomeWork_Methods_5_02.csproj", "{AC1BD1B8-3C08-4D6F-A124-2752E1DBEA89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetodAdditions", "..\MetodPluss\MetodAdditions.csproj", "{4D90F9AC-6F9A-4849-92CE-710734A6100F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MetodAdditions", "..\MetodPluss\MetodAdditions.csproj", "{4D90F9AC-6F9A-4849-92CE-710734A6100F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodSubtractions", "..\MethodSubtractions\MethodSubtractions.csproj", "{28F519E4-288D-460F-9E71-752ABF11D3EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodSubtractions", "..\MethodSubtractions\MethodSubtractions.csproj", "{28F519E4-288D-460F-9E71-752ABF11D3EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiplicationMatrix", "..\MultiplicationMatrix\MultiplicationMatrix.csproj", "{EEEB5212-9BC2-4944-89A7-84E43BD3C420}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiplicationMatrix", "..\MultiplicationMatrix\MultiplicationMatrix.csproj", "{EEEB5212-9BC2-4944-89A7-84E43BD3C420}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixOnMatrix", "..\MatrixOnMatrix\MatrixOnMatrix.csproj", "{9B0B5370-BE17-4380-BDAB-42D82D7CDD5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MatrixOnNumber", "..\MatrixOnMatrix\MatrixOnNumber.csproj", "{9B0B5370-BE17-4380-BDAB-42D82D7CDD5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

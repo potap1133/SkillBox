@@ -44,11 +44,39 @@ namespace ShortWord
 
             for (int i = 0; i < Args.Length; i++)
             {
-                numbersWords[i] = Args[i].Length;
+                numbersWords[i] = Args[i].Length; 
 
             }
 
             return numbersWords;
+        }
+
+        /// <summary>
+        /// Метод сортирует массив из чисел (колличечства букв в словах)
+        /// </summary>
+        /// <param name="Args"> Массив из чисел (колличечства букв в словах) </param>
+        /// <returns> Отсортированный массив чисел </returns>
+        public static int[] SortWords(int[] Args)
+        {
+            int temp;
+            int numberArgs = Args.Length ;
+
+            int[] result = new int[Args.Length];
+
+            for (int i = 0; i < numberArgs; i++)
+            {
+
+                for (int j = 0; j < numberArgs; j++)
+                {
+                    if (Args[i] > Args[j])
+                    {
+                        temp = Args[i];
+                        Args[i] = Args[j];
+                        Args[j] = temp;
+                    }
+                }
+            }
+            return result;
         }
 
         /// <summary>
@@ -57,7 +85,7 @@ namespace ShortWord
         /// <param name="Args"> Массив чисел (колличечства букв в словах) </param>
         /// <param name="Args1">Массив из слов</param>
         /// <returns> Массив слов соответствующих определенному параметру </returns>
-        public static string[] SortWord(int[] Args, string[] Args1)
+        public static string[] SelectionWord(int[] Args, string[] Args1)
         {
             string[] resalt = new string[Args.Length];
             
@@ -93,9 +121,8 @@ namespace ShortWord
             string initialText = Text();
             string[] words = CleaningText(initialText);
             int[] numberWords = СonversionNumbers(words);
-            Array.Sort(numberWords);
-            //Array.Reverse(numberWords);
-            string[] checkingWords = SortWord(numberWords, words);
+            int[] srtingNumber = SortWords(numberWords);
+            string[] checkingWords = SelectionWord(numberWords, words);
             
             Console.WriteLine();
 

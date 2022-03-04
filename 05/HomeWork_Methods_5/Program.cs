@@ -148,14 +148,17 @@ namespace HomeWork_Methods_5
         /// <param name="Args1"> Множетель матрици </param>
         public static void ArrayOnNumber(int[,] Args ,int Args1)
         {
+            int argsOne = Args.GetLength(0);
+            int argsTwo = Args.GetLength(1);
+
             Random r = new Random();
 
             int[,] result = new int[Args.Length, Args.Length];
             int[,] massiv = new int[Args.Length, Args.Length];
 
-            for (int f = 0; f < Args.GetLength(0); f++)
+            for (int f = 0; f < argsOne; f++)
             {
-                for (int l = 0; l < Args.GetLength(1); l++)
+                for (int l = 0; l < argsTwo; l++)
                 {
                     massiv[f, l] = r.Next(0, 10);
                     Console.Write($" {massiv[f, l],4} ");
@@ -184,6 +187,8 @@ namespace HomeWork_Methods_5
         /// <param name="ArgsSecond"> Параметры второго массива </param>
         public static void ArrayPlusArray(int[,] ArgsFirst, int[,] ArgsSecond)
         {
+
+
             int[,] result = new int[ArgsFirst.Length, ArgsSecond.Length];
             int[,] massivFirst = new int[ArgsFirst.GetLength(0), ArgsFirst.GetLength(1)];
             int[,] massivSecond = new int[ArgsSecond.GetLength(0), ArgsSecond.GetLength(1)];
